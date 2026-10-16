@@ -191,9 +191,9 @@ public final class ProofsMenus implements Listener {
             }
             case ACTION_CALL -> {
                 if (targetId != null) {
-                    if (!admin.hasPermission("proofs.check.start")) {
+                    if (!admin.hasPermission("proofs.use")) {
                         admin.sendMessage(Component.text(
-                                "Недостаточно прав (proofs.check.start).", NamedTextColor.RED));
+                                "Недостаточно прав (proofs.use).", NamedTextColor.RED));
                         return;
                     }
                     Player target = Bukkit.getPlayer(targetId);

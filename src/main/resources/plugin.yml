@@ -4,12 +4,10 @@ main: dev.proofs.plugin.ProofsPlugin
 api-version: '1.21'
 author: ProofsTeam
 description: Античит-проверки: вызов игроков на proofcheck с меню, блоками действий и наказанием за лог-аут.
-softdepend:
-  - LuckPerms
 commands:
   proofs:
     description: Открыть меню проверок / вызвать игрока на проверку.
-    usage: /proofs [ник|end <ник>|stop|editor|lp <setgroup|cleargroup> <группа>]
+    usage: /proofs [ник|end <ник>|stop]
     permission: proofs.use
 permissions:
   proofs.use:
@@ -18,25 +16,17 @@ permissions:
   proofs.admin:
     description: Получать уведомления о началах/окончаниях проверок.
     default: op
-  proofs.check.start:
-    description: Вызывать игроков на проверку.
-    default: true
   proofs.check.end:
-    description: Завершать активные проверки.
-    default: true
+    description: Завершать активные проверки (/proofs end).
+    default: op
   proofs.spectate:
     description: Использовать кнопку "Спек" в меню (телепорт в режиме наблюдателя).
     default: true
-  proofs.editor:
-    description: Доступ к редактору прав LuckPerms (/proofs editor, /proofs lp ...).
-    default: op
   proofs.*:
     description: Все права плагина Proofs.
     default: op
     children:
       proofs.use: true
       proofs.admin: true
-      proofs.check.start: true
       proofs.check.end: true
       proofs.spectate: true
-      proofs.editor: true
