@@ -30,7 +30,7 @@
 mvn clean package
 ```
 
-Готовый JAR появится в `target/Proofs-1.0.0.jar`. Положите его в папку `plugins/` вашего Paper-сервера.
+Готовый JAR появится в `target/Proofs-1.1.0.jar`. Положите его в папку `plugins/` вашего Paper-сервера.
 
 > Требуется **Java 21+** (совместимо с Java 25) и **Paper 1.21.x**.
 

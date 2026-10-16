@@ -1,7 +1,7 @@
 name: Proofs
 version: '${project.version}'
 main: dev.proofs.plugin.ProofsPlugin
-api-version: '1.21'
+api-version: '1.21.11'
 author: ProofsTeam
 description: Античит-проверки: вызов игроков на proofcheck с меню, блоками действий и наказанием за лог-аут.
 commands:
