@@ -1,0 +1,21 @@
+target/
+build/
+out/
+*.jar
+*.class
+
+# IDE
+.idea/
+.vscode/
+*.iml
+.classpath
+.project
+.settings/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Minecraft test server
+test-server/
+run/

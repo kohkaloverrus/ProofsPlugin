@@ -1,0 +1,18 @@
+name: Proofs
+version: '${project.version}'
+main: dev.proofs.plugin.ProofsPlugin
+api-version: '1.21'
+author: ProofsTeam
+description: Античит-проверки: вызов игроков на proofcheck с меню, блоками действий и наказанием за лог-аут.
+commands:
+  proofs:
+    description: Открыть меню проверок / вызвать игрока на проверку.
+    usage: /proofs [ник|end <ник>|stop]
+    permission: proofs.use
+permissions:
+  proofs.use:
+    description: Доступ к команде /proofs и меню проверок.
+    default: op
+  proofs.admin:
+    description: Получать уведомления о началах/окончаниях проверок.
+    default: op
