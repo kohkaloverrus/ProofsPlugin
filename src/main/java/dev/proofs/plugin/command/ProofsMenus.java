@@ -191,6 +191,11 @@ public final class ProofsMenus implements Listener {
             }
             case ACTION_CALL -> {
                 if (targetId != null) {
+                    if (!admin.hasPermission("proofs.check.start")) {
+                        admin.sendMessage(Component.text(
+                                "Недостаточно прав (proofs.check.start).", NamedTextColor.RED));
+                        return;
+                    }
                     Player target = Bukkit.getPlayer(targetId);
                     if (target == null) {
                         admin.sendMessage(Component.text("Игрок не в сети.", NamedTextColor.RED));
@@ -209,6 +214,11 @@ public final class ProofsMenus implements Listener {
             }
             case ACTION_SPECTATE -> {
                 if (targetId != null) {
+                    if (!admin.hasPermission("proofs.spectate")) {
+                        admin.sendMessage(Component.text(
+                                "Недостаточно прав (proofs.spectate).", NamedTextColor.RED));
+                        return;
+                    }
                     Player target = Bukkit.getPlayer(targetId);
                     if (target == null) {
                         admin.sendMessage(Component.text("Игрок не в сети.", NamedTextColor.RED));

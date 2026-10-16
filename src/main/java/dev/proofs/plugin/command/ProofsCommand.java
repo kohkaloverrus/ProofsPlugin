@@ -56,6 +56,11 @@ public class ProofsCommand implements CommandExecutor, TabCompleter {
 
         // /proofs end <ник>
         if (args[0].equalsIgnoreCase("end")) {
+            if (!admin.hasPermission("proofs.check.end")) {
+                admin.sendMessage(Component.text("Недостаточно прав (proofs.check.end).",
+                        NamedTextColor.RED));
+                return true;
+            }
             if (args.length >= 2) {
                 Player target = Bukkit.getPlayerExact(args[1]);
                 if (target == null) {
@@ -109,6 +114,11 @@ public class ProofsCommand implements CommandExecutor, TabCompleter {
         }
         if (target.getUniqueId().equals(admin.getUniqueId())) {
             admin.sendMessage(Component.text("Нельзя вызвать самого себя на проверку.",
+                    NamedTextColor.RED));
+            return true;
+        }
+        if (!admin.hasPermission("proofs.check.start")) {
+            admin.sendMessage(Component.text("Недостаточно прав (proofs.check.start).",
                     NamedTextColor.RED));
             return true;
         }
