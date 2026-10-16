@@ -1,29 +1,29 @@
 name: Proofs
-version: '${project.version}'
+version: '1.1.0'
 main: dev.proofs.plugin.ProofsPlugin
-api-version: '1.21.11'
+api-version: '1.21'
 author: ProofsTeam
-description: Античит-проверки: вызов игроков на proofcheck с меню, блоками действий и наказанием за лог-аут.
+description: "Античит-проверки: вызов игроков на proofcheck с меню, блоками действий и наказанием за лог-аут."
 commands:
   proofs:
-    description: Открыть меню проверок / вызвать игрока на проверку.
-    usage: /proofs [ник|end <ник>|stop]
+    description: "Открыть меню проверок или вызвать игрока на проверку."
+    usage: "/proofs [ник|end <ник>|stop]"
     permission: proofs.use
 permissions:
   proofs.use:
-    description: Доступ к команде /proofs и меню проверок.
+    description: "Доступ к команде /proofs и меню проверок."
     default: op
   proofs.admin:
-    description: Получать уведомления о началах/окончаниях проверок.
+    description: "Получать уведомления о началах и окончаниях проверок."
     default: op
   proofs.check.end:
-    description: Завершать активные проверки (/proofs end).
+    description: "Завершать активные проверки командой /proofs end."
     default: op
   proofs.spectate:
-    description: Использовать кнопку "Спек" в меню (телепорт в режиме наблюдателя).
+    description: "Использовать кнопку Спек в меню (телепорт в режиме наблюдателя)."
     default: true
   proofs.*:
-    description: Все права плагина Proofs.
+    description: "Все права плагина Proofs."
     default: op
     children:
       proofs.use: true
