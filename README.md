@@ -47,6 +47,22 @@ check:
 |---|---|---|
 | `proofs.use` | OP | Доступ к команде `/proofs` и меню |
 | `proofs.admin` | OP | Уведомления о начале/окончании проверок и о лог-аутах во время проверки |
+| `proofs.check.start` | все | Вызывать игроков на проверку |
+| `proofs.check.end` | все | Завершать активные проверки |
+| `proofs.spectate` | все | Кнопка «Спек» в меню |
+| `proofs.editor` | OP | Редактор прав LuckPerms (`/proofs editor`, `/proofs lp ...`) |
+| `proofs.*` | OP | Все права плагина (children) |
+
+### 🧩 LuckPerms — редактор прав
+
+Плагин поддерживает **LuckPerms** (softdepend). Если LuckPerms установлен:
+
+- `/proofs editor` — открывает веб-редактор прав LuckPerms (`/lp editor`), где можно
+  удобно раздавать права плагина группам/игрокам;
+- `/proofs lp setgroup <группа>` — выдать все права Proofs выбранной группе;
+- `/proofs lp cleargroup <группа>` — снять все права Proofs у группы.
+
+Без LuckPerms плагин работает на стандартных правах Bukkit.
 
 ## 📸 Как это работает (UX-поток)
 
